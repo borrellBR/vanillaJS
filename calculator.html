@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Calculator</title>
+
+    <style>
+
+    </style>
+
+  </head>
+
+  <body>
+<p> <button id="1">1</button>
+  <button id="2">2</button>
+  <button id="3">3</button>
+  <button id="+">+</button>
+</p>
+
+  <p><button id="4">4</button>
+    <button id="5">5</button>
+    <button id="6">6</button>
+    <button id="-">-</button>
+</p>
+
+<p><button id="7">7</button>
+  <button id="8">8</button>
+  <button id="9">9</button>
+  <button id="/">/</button>
+</p>
+
+<p><button id="0">0</button>
+  <button id=".">.</button>
+  <button id="=">=</button>
+  <button id="*">*</button>
+</p>
+<button id="Clear">Clear</button>
+
+
+
+    <script>
+      let calculation = ""
+
+      document.getElementById("1").onclick = function(){
+        calculation += 1
+        console.log(calculation)
+      }
+      document.getElementById("2").onclick = function(){
+        calculation += 2
+        console.log(calculation)
+      }
+      document.getElementById("3").onclick = function(){
+        calculation += 3
+        console.log(calculation)
+      }
+      document.getElementById("4").onclick = function(){
+        calculation += 4
+        console.log(calculation)
+      }
+      document.getElementById("5").onclick = function(){
+        calculation += 5
+        console.log(calculation)
+      }
+      document.getElementById("6").onclick = function(){
+        calculation += 6
+        console.log(calculation)
+      }
+      document.getElementById("7").onclick = function(){
+        calculation += 7
+        console.log(calculation)
+      }
+      document.getElementById("8").onclick = function(){
+        calculation += 8
+        console.log(calculation)
+      }
+      document.getElementById("9").onclick = function(){
+        calculation += 9
+        console.log(calculation)
+      }
+      document.getElementById(".").onclick = function(){
+        calculation += "."
+        console.log(calculation)
+      }
+      document.getElementById("=").onclick = function(){
+      calculation = eval(calculation)
+      console.log(calculation)
+      }
+      document.getElementById("*").onclick = function(){
+        calculation += "*"
+        console.log(calculation)
+      }
+      document.getElementById("/").onclick = function(){
+        calculation += "/"
+        console.log(calculation)
+      }
+      document.getElementById("-").onclick = function(){
+        calculation += "-"
+        console.log(calculation)
+      }
+      document.getElementById("+").onclick = function(){
+        calculation += "+"
+        console.log(calculation)
+      }
+      document.getElementById("Clear").onclick = function(){
+        calculation = ""
+        console.log(calculation)
+      }
+    </script>
+
+  </body>
+
+</html>
