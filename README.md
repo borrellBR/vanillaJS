@@ -1,1 +1,0 @@
-<!-- BorrellBR # vanillaJS practise -->
