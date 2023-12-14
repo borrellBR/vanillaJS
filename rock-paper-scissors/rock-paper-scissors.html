@@ -4,90 +4,107 @@
     <meta charset="utf-8">
 
     <title>Rock Paper Scissors</title>
+
+
   </head>
 
   <body>
 
-    <p>Rock Paper Scissors</p>
+    <style>
+      body {
+          margin: 350px;
+          text-align: center;
+          padding: 20px;
+          background-color: rgb(190, 201, 201);
+      }
 
-    <button id=rock>Rock</button>
-    <button id = paper>Paper</button>
-    <button id=scissors>Scissors</button>
+      .card {
+          background-color: aliceblue;
+          border-radius: 20px;
+          padding: 20px;
+          width: 370px;
+          max-width: 100%;
+          margin: auto;
+      }
+  </style>
 
+    <div class="card">
+      <p>Rock Paper Scissors</p>
+
+      <button id=rock>Rock</button>
+      <button id =paper>Paper</button>
+      <button id=scissors>Scissors</button>
+
+      <p id =result></p>
+    </div>
 
   <script>
 
     let computerMove = '';
     let result = '';
+    let resultElement = document.getElementById('result')
 
 
-   document.getElementById("rock").onclick = function() {
-   const randomNumber = Math.random()
+    document.getElementById('rock').onclick = function() {
+      const randomNumber = Math.random();
 
-   if(randomNumber < 0.33){
-    computerMove = 'rock'
-   } else if (randomNumber >= 0.33 && randomNumber < 0.66){
-    computerMove = 'paper'
-   } else if(randomNumber >= 0.66 && randomNumber <= 1){
-    computerMove = 'scissors'
-   }
-   console.log(computerMove)
+      if(randomNumber >= 0 && randomNumber <= 0.33){
+        computerMove = 'rock';
+      } else if (randomNumber > 0.33 && randomNumber <= 0.66){
+        computerMove = 'paper';
+      } else if (randomNumber > 0.66 && randomNumber <= 0.99){
+        computerMove = 'scissors';
+      };
 
-   if(computerMove === 'rock'){
-    result = "It's a tie!"
-   } else if(computerMove === 'paper')
-   result = 'You lose'
-   else if(computerMove === 'scissors')
-   result = 'You win!'
+      if(computerMove ==='rock'){
+        result = "It's a tie!"
+      } else if (computerMove === 'paper'){
+        result = 'You lose!'
+      } else if(computerMove === "scissors"){
+        result = "You win!"
+      }
 
-   alert(`You picked rock. Computer picked ${computerMove}. ${result}` )
-   }
+      resultElement.innerHTML = `You picked rock. Computer picked ${computerMove}. ${result}`
 
-   document.getElementById("paper").onclick = function() {
-   const randomNumber = Math.random()
+    }
 
-   if(randomNumber < 0.33){
-    computerMove = 'rock'
-   } else if (randomNumber >= 0.33 && randomNumber < 0.66){
-    computerMove = 'paper'
-   } else if(randomNumber >= 0.66 && randomNumber <= 1){
-    computerMove = 'scissors'
-   }
-   console.log(computerMove)
+    document.getElementById('paper').onclick = function(){
+     const randomNumber = Math.random();
+      if (randomNumber >= 0 && randomNumber < 0.33){
+        computerMove = 'rock'
+    } else if (randomNumber >= 0.33 && randomNumber < 0.66){
+        computerMove = 'paper'
+    } else if (randomNumber >= 0.66 && randomNumber < 0.99){
+        computerMove = 'scissors'
+    }
 
-   if(computerMove === 'rock'){
-    result = "You win!"
-   } else if(computerMove === 'paper')
-   result = "It's a tie!"
-   else if(computerMove === 'scissors')
-   result = 'You lost!'
+    if (computerMove === 'rock'){
+      result = 'You win!'
+    } else if (computerMove === 'paper'){
+      result = "It's a tie!"
+    } else if (computerMove === 'scissors'){
+    result = 'You lost!'
+    }
+    resultElement.innerHTML = `You picked paper. Computer picked ${computerMove}. ${result}`  }
 
-   alert(`You picked paper. Computer picked ${computerMove}. ${result}` )
-   }
+  document.getElementById('scissors').onclick = function(){
+     const randomNumber = Math.random();
+      if (randomNumber >= 0 && randomNumber < 0.33){
+        computerMove = 'rock'
+    } else if (randomNumber >= 0.33 && randomNumber < 0.66){
+        computerMove = 'paper'
+    } else if (randomNumber >= 0.66 && randomNumber < 0.99){
+        computerMove = 'scissors'
+    }
 
-   document.getElementById("scissors").onclick = function() {
-   const randomNumber = Math.random()
-
-   if(randomNumber < 0.33){
-    computerMove = 'rock'
-   } else if (randomNumber >= 0.33 && randomNumber < 0.66){
-    computerMove = 'paper'
-   } else if(randomNumber >= 0.66 && randomNumber <= 1){
-    computerMove = 'scissors'
-   }
-   console.log(computerMove)
-
-   if(computerMove === 'rock'){
-    result ='You lose'
-   } else if(computerMove === 'paper')
-   result = 'You win!'
-   else if(computerMove === 'scissors')
-   result =  "It's a tie!"
-
-   alert(`You picked scissors. Computer picked ${computerMove}. ${result}` )
-   }
-
-
+    if (computerMove === 'rock'){
+      result = 'You lost!'
+    } else if (computerMove === 'paper'){
+      result = 'You win!'
+    } else if (computerMove === 'scissors'){
+    result = 'It\'s a tie!'
+    }
+    resultElement.innerHTML = `You picked scissors. Computer picked ${computerMove}. ${result}`  }
   </script>
   </body>
 
