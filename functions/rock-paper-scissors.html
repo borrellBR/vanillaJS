@@ -27,7 +27,7 @@
           margin: auto;
       }
   </style>
-
+  
     <div class="card">
       <p>Rock Paper Scissors</p>
 
@@ -43,28 +43,8 @@
     let result = '';
     let resultElement = document.getElementById('result')
 
-    function pickrandomNumber(){
-      const randomNumber = Math.random();
-
-      let computerMove = '';
-      let result = '';
-      let resultElement = document.getElementById('result')
-
-
-
-      if(randomNumber >= 0 && randomNumber <= 0.33){
-        computerMove = 'rock';
-      } else if (randomNumber > 0.33 && randomNumber <= 0.66){
-        computerMove = 'paper';
-      } else if (randomNumber > 0.66 && randomNumber <= 0.99){
-        computerMove = 'scissors';
-      };
-      return computerMove;
-    };
-
     function playGame(playerMove){
       const computerMove = pickrandomNumber();
-
 
       if (playerMove === 'rock'){
         if (computerMove === 'rock'){
@@ -94,7 +74,23 @@
 
       resultElement.innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
 
-    }; 
+    };
+
+    function pickrandomNumber(){
+      const randomNumber = Math.random();
+
+      let computerMove = '';
+
+      if(randomNumber >= 0 && randomNumber <= 0.33){
+        computerMove = 'rock';
+      } else if (randomNumber > 0.33 && randomNumber <= 0.66){
+        computerMove = 'paper';
+      } else if (randomNumber > 0.66 && randomNumber <= 0.99){
+        computerMove = 'scissors';
+      };
+      return computerMove;
+    };
+
   </script>
   </body>
 
