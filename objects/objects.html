@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Objects</title>
+
+
+  </head>
+
+  <body>
+
+    <style>
+
+    </style>
+
+
+
+    <script>
+
+      // const regalo1 = {
+      //   nombre: 'Caja de bombones',
+      //   precio: 10,
+      //   cantidad: 1
+      // };
+      // console.log (regalo1)
+
+      // regalo1.envio = `DHGate`;
+      // console.log (regalo1)
+
+      // delete regalo1.envio;
+      // console.log (regalo1)
+
+     const bike = {
+      name: "Stevens",
+      price: "250$",
+      ['delivery-method']: "Car",
+      productrating: {
+        stars:'4.3',
+        ratings:'83'
+      },
+
+      fun: function function1(){
+        console.log('function inside object');
+      }
+     }
+     console.log(JSON.stringify(bike))
+
+     const jsonString = JSON.stringify(bike)
+
+     console.log (JSON.parse(jsonString))
+    </script>
+  </body>
+
+</html>
